@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get 'days/index'
+  get '/days', to: "days#index"
+    resources :days
+
+  get '/tasks', to: "tasks#index"
+    resources :tasks
+
 end
